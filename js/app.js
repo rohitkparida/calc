@@ -83,6 +83,15 @@ function scrolld() {
 }
 
 
+$("#inputs").on('scroll load', function() {
+    var winScroll = $("#inputs").scrollTop();
+    var height = $("#inputs").prop("scrollHeight");
+    var degree = (winScroll / height) * 360;
+    console.log(degree);
+    document.getElementById("chevron").style.transform = "rotateX("+ degree +"deg)";
+});
+
+
 // var fix = primary.replace(/, "b");
 // console.log(fix);
 
