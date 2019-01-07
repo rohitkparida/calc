@@ -72,10 +72,11 @@ $('#result').click(function() {
     $("#secondary").val('');
 
 });
-
-if ($('#inputs').scrollTop() >= 50) {
-
+$("#inputs").on('scroll load', function() {
+if ($('#content').scrollTop() >= $("#content").prop("scrollHeight")) {
+  console.log("hey");
 }
+});
 
 function scrolld() {
     document.getElementById("inputs").scrollBy(0, document.documentElement.clientHeight);

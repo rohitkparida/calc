@@ -1,29 +1,36 @@
 {
-    "short_name": "Blog",
-    "name": "Blog",
-    "display": "standalone",
-    "icons": [{
-            "src": "icons/ic_launcher_calculator_round _48.png",
-            "sizes": "48x48",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/ic_launcher_calculator_round _96.png",
-            "sizes": "96x96",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/ic_launcher_calculator_round _144.png",
-            "sizes": "144x144",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/ic_launcher_calculator_round _196.png",
-            "sizes": "196x196",
-            "type": "image/png"
-        }
-    ],
-    "start_url": "https://rohitkparida.github.io/calc/",
-    "background_color": "#212121",
-    "theme_color": "#212121"
+  "short_name": "Calculator",
+  "description": "A cross-platform opensource Calculator PWA",
+  "name": "Calculator",
+  "display": "standalone",
+  "icons": [{
+      "src": "icons/ic_launcher_calculator_round _196.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ic_launcher_calculator_round _196.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ic_launcher_calculator_round _196.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ic_launcher_calculator_round _196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://rohitkparida.github.io/calc/",
+  "background_color": "#212121",
+  "theme_color": "#1a73e8",
+  "scope": "/app/",
+  "related_applications": [{
+    "platform": "play",
+    "url": "https://play.google.com/store/apps/details?id=com.google.android.calculator",
+    "id": "com.google.android.calculator"
+  }]
 }
