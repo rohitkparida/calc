@@ -92,6 +92,7 @@ $("#inputs").on('scroll load', function() {
 });
 
 
+$("#content").scrollTop($("#content").prop("scrollHeight"));
 // var fix = primary.replace(/, "b");
 // console.log(fix);
 
