@@ -1,83 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" class="pri">
+<html lang="en" class="theme">
 
 <head>
-    <title>Calculator</title>
-    <link rel="canonical" href="#" />
+    <title>Video - Video Player</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <meta id="theme-color" name="theme-color" content="#1a73e8">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="manifest" href="https://rohitkparida.github.io/calc/manifest.json">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <link rel="icon" href="calculator_48dp.png" sizes="192x192" type="image/png">
-    <script src="js/jquery.min.js"></script>
+    <meta name="theme-color" content="#000">
+    <meta name="application-name" content="Notes">
+    <meta name="description" content="Video Player App">
+    <meta name="keywords" content="note,offline,web,app">
+    <meta name="author" content="Rohit Parida">
+    <link rel="manifest" href="https://rohitparida27.github.io/video/manifest.json">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?lang=en&amp;family=Product+Sans">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="icon" href="img/icon-48.png">
     <script src="ripple.js"></script>
 </head>
 
 <body>
-    <!--______________________________CONTENT-->
-    <div id="content">
-      <div id="up-scroll">
+    <div class="vessel">
+        <!--______________________________APPBAR--
+        <div class="appbar">
+            <h1 class="title">Push<span class="highlight">Up</span></h1>
+        </div>
+        <!--______________________________APPBAR_END-->
+        <!--______________________________CONTENT-->
+        <div class="content">
+            <div class="video-container">
+                <video src="" controls autoplay="true" preload="auto" poster="https://data.whicdn.com/images/201361048/original.gif" id="element"></video>
+            </div>
+            <div id="inputs">
+                <div class="status"></div>
+                <div id="message" hidden></div>
+                <div class="botmbar">
+                    <input type="file" name="upload" id="receiver" class="receiver" hidden>
+                    <label for="receiver" class="ripple">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5v10.5c0 .55-.45 1-1 1s-1-.45-1-1V6H10v9.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V5c0-2.21-1.79-4-4-4S7 2.79 7 5v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z" />
+                            <path d="M0 0h24v24H0z" fill="none" />
+                        </svg>
+                    </label>
+                    <input type="text" id="newURL" onkeyup="success()" placeholder="Enter URL">
+                    <button id="send" type="submit" onclick="changeURL()" disabled></button>
+                    <label class="send ripple" for="send">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                            <path d="M0 0h24v24H0z" fill="none" />
+                        </svg>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!--______________________________CONTENT_END-->
+    </div>
 
-      </div>
-        <div id="display">
-            <input id="primary">
-            <input id="secondary" type="number" disabled>
-        </div>
-        <div id="inputs">
-          <div id="basics">
-            <div id="num-pad">
-                <button class="input ripple" value="7">7</button>
-                <button class="input ripple" value="8">8</button>
-                <button class="input ripple" value="9">9</button>
-                <button class="input ripple" value="4">4</button>
-                <button class="input ripple" value="5">5</button>
-                <button class="input ripple" value="6">6</button>
-                <button class="input ripple" value="1">1</button>
-                <button class="input ripple" value="2">2</button>
-                <button class="input ripple" value="3">3</button>
-                <button class="input ripple" value="0">0</button>
-                <button class="input ripple" value=".">.</button>
-                <button class="input ripple" value="" id="result">=</button>
-            </div>
-            <div id="ops">
-                <button class="input" id="clear" value="">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M19,15.59L17.59,17L14,13.41L10.41,17L9,15.59L12.59,12L9,8.41L10.41,7L14,10.59L17.59,7L19,8.41L15.41,12L19,15.59M22,3A2,2 0 0,1 24,5V19A2,2 0 0,1 22,21H7C6.31,21 5.77,20.64 5.41,20.11L0,12L5.41,3.88C5.77,3.35 6.31,3 7,3H22M22,5H7L2.28,12L7,19H22V5Z" />
-                    </svg>
-                </button>
-                <button class="input" value="&divide;">&divide;</button>
-                <button class="input" value="&times;">&times;</button>
-                <button class="input" value="&minus;">&minus;</button>
-                <button class="input" value="&plus;">&plus;</button>
-            </div>
-          </div>
-            <div id="spl">
-              <button id="scroller" onclick="scrolld()" >
-                <svg id="chevron" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/>
-                  <path d="M11.29 8.71L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.38-.39-1.02-.39-1.41 0z"/>
-                </svg>
-              </button>
-                <button class="input" value="π">π</button>
-                <button class="input" value="8">8</button>
-                <button class="input" value="9">9</button>
-                <button class="input" value="4">4</button>
-                <button class="input" value="5">5</button>
-                <button class="input" value="6">6</button>
-                <button class="input" value="1">1</button>
-                <button class="input" value="2">2</button>
-                <button class="input" value="3">3</button>
-                <button class="input" value="0">0</button>
-                <button class="input" value=".">.</button>
-                <button class="input" value="" id="result">=</button>
-            </div>
-        </div>
-    </div>
-    <!--______________________________CONTENT_END-->
-    </div>
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
-<script src="js/app.js"></script>
 
 </html>
