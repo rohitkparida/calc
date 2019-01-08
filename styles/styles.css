@@ -62,7 +62,7 @@ button:focus, input:focus {
   width: 100%;
   text-align: right;
   border: none;
-  font-size: 4.5rem;
+  font-size: 9.9vh;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -71,7 +71,7 @@ button:focus, input:focus {
   width: 100%;
   text-align: right;
   border: none;
-  font-size: 3rem;
+  font-size: 6.6vh;
   color: #757575;
 }
 
@@ -114,8 +114,12 @@ button {
   width: calc(100% / 3);
   float: left;
   text-align: center;
-  font-size: 2rem;
-  line-height: 15vh;
+  font-size: 4.4vh;
+  line-height: 12vh;
+}
+
+svg {
+  height: 3.285vh;
 }
 
 #ops {

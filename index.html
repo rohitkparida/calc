@@ -12,7 +12,8 @@
     <link rel="manifest" href="https://rohitkparida.github.io/calc/manifest.json">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="icon" href="calculator_48dp.png" sizes="192x192" type="image/png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="ripple.js"></script>
 </head>
 
 <body>
@@ -28,22 +29,22 @@
         <div id="inputs">
           <div id="basics">
             <div id="num-pad">
-                <button class="input" value="7">7</button>
-                <button class="input" value="8">8</button>
-                <button class="input" value="9">9</button>
-                <button class="input" value="4">4</button>
-                <button class="input" value="5">5</button>
-                <button class="input" value="6">6</button>
-                <button class="input" value="1">1</button>
-                <button class="input" value="2">2</button>
-                <button class="input" value="3">3</button>
-                <button class="input" value="0">0</button>
-                <button class="input" value=".">.</button>
-                <button class="input" value="" id="result">=</button>
+                <button class="input ripple" value="7">7</button>
+                <button class="input ripple" value="8">8</button>
+                <button class="input ripple" value="9">9</button>
+                <button class="input ripple" value="4">4</button>
+                <button class="input ripple" value="5">5</button>
+                <button class="input ripple" value="6">6</button>
+                <button class="input ripple" value="1">1</button>
+                <button class="input ripple" value="2">2</button>
+                <button class="input ripple" value="3">3</button>
+                <button class="input ripple" value="0">0</button>
+                <button class="input ripple" value=".">.</button>
+                <button class="input ripple" value="" id="result">=</button>
             </div>
             <div id="ops">
                 <button class="input" id="clear" value="">
-                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <svg viewBox="0 0 24 24">
                         <path d="M19,15.59L17.59,17L14,13.41L10.41,17L9,15.59L12.59,12L9,8.41L10.41,7L14,10.59L17.59,7L19,8.41L15.41,12L19,15.59M22,3A2,2 0 0,1 24,5V19A2,2 0 0,1 22,21H7C6.31,21 5.77,20.64 5.41,20.11L0,12L5.41,3.88C5.77,3.35 6.31,3 7,3H22M22,5H7L2.28,12L7,19H22V5Z" />
                     </svg>
                 </button>
