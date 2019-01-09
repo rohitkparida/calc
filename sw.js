@@ -6,13 +6,7 @@ var CACHE_FILES = [
     'index.html',
     'js/app.js',
     'js/jquery.min.js',
-    'css/style.css',
-    'favicon.ico',
-    'manifest.json',
-    'img/icon-48.png',
-    'img/icon-96.png',
-    'img/icon-144.png',
-    'img/icon-196.png'
+    'styles/styles.css'
 ];
 
 self.addEventListener('install', function(event) {
