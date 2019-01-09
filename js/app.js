@@ -1,5 +1,3 @@
-
-
 // Clear - Button
 $('#clear').click(function() {
     $("#primary").val('');
@@ -40,7 +38,7 @@ $(".input").click(function() {
         $("#primary").val($("#primary").val() + txt);
         var primary = $("#primary").val();
         console.log(primary);
-        primary = primary.split("\xF7").join("/").split("\xD7").join("*").split("u2212").join("-").split("π").join("22/7");
+        primary = primary.split("\xF7").join("/").split("\xD7").join("*").split("u2212").join("-").split("π").join("22/7").split("%").join("/100*");
         // replace("\xF7", "/1").replace("\xD7", "*1").replace("+", "+0").replace("\u2212", "-0").replace("π", "22/7");
         console.log(primary);
         ans = eval(primary.toString());
@@ -123,6 +121,7 @@ $("#content").scrollTop($("#content").prop("scrollHeight"));
 // } else {
 //     localStorage.setItem('theme', 'dark');
 // }
+
 // Registering ServiceWorker
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').then(function(registration) {
