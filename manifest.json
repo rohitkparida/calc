@@ -4,22 +4,22 @@
   "name": "Calculator",
   "display": "standalone",
   "icons": [{
-      "src": "icons/ic_launcher_calculator_round _196.png",
+      "src": "icons/ic_launcher_calculator_round_192.png",
       "sizes": "48x48",
       "type": "image/png"
     },
     {
-      "src": "icons/ic_launcher_calculator_round _196.png",
+      "src": "icons/ic_launcher_calculator_round_192.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "icons/ic_launcher_calculator_round _196.png",
+      "src": "icons/ic_launcher_calculator_round_192.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "icons/ic_launcher_calculator_round _196.png",
+      "src": "icons/ic_launcher_calculator_round_192.png",
       "sizes": "196x196",
       "type": "image/png"
     }
